@@ -1,0 +1,723 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>梯子测速｜15 家主流机场线路延迟、节点在线与实测报告 - 梯子站</title>
+  <meta name="description" content="基于 2026 年最新后台实测，公开 15 家主流梯子机场的入口响应延迟、节点在线率、IPLC/IEPL 专线带宽与测速记录，提供独立评测与官网入口直达。">
+  <meta name="keywords" content="梯子测速, 机场测速, 节点延迟测试, 丢包率, IPLC测速, 晚高峰测速">
+  <link rel="canonical" href="https://tizizhan.online/speed-test.html">
+
+  <meta name="geo.region" content="HK">
+  <meta name="geo.placename" content="Hong Kong">
+  <meta name="content-language" content="zh-CN">
+
+  <meta property="og:site_name" content="梯子站">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="梯子测速｜15 家主流机场线路延迟、节点在线与实测报告">
+  <meta property="og:description" content="公开 15 家主流梯子机场的入口响应延迟、节点在线率与专线带宽实测报告。">
+  <meta property="og:url" content="https://tizizhan.online/speed-test.html">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "首页",
+        "item": "https://tizizhan.online/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "梯子测速",
+        "item": "https://tizizhan.online/speed-test.html"
+      }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-page="speed">
+  <div data-site-header></div>
+  <main>
+    <section class="hero compact">
+      <div class="container">
+        <div class="eyebrow">SPEED TEST &amp; BENCHMARK · 15 SERVICES</div>
+        <h1>看懂数据，才是<br><span class="gradient-text">有效测速</span></h1>
+        <p class="hero-copy">峰值下载速度只是一个切面，交互体验更受入口响应、节点在线率、抖动与晚高峰丢包影响。以下基于 2026 年 10 月最新实测，整理 15 家主流梯子的真实测速与专线核验记录。</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#benchmark-table">查看 15 家测速数据表 <span class="arrow">↓</span></a>
+          <a class="button secondary" href="#speed-cards">浏览测速分析卡片</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 个核心测速指标 -->
+    <section class="section tint">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Metrics</div>
+            <h2>科学测速的四个核心指标</h2>
+          </div>
+        </div>
+        <div class="grid grid-4">
+          <div class="card">
+            <div class="icon-tile">ms</div>
+            <h3>入口响应与延迟</h3>
+            <p>数据包往返时间（RTT）。入口响应快意味着连接建立迅速；游戏与网页更看重此指标。</p>
+            <span class="tag purple">单位：ms · 越低越好</span>
+          </div>
+          <div class="card">
+            <div class="icon-tile">≈</div>
+            <h3>延迟抖动 (Jitter)</h3>
+            <p>延迟的瞬时波动幅度。抖动过大常导致语音会议断续、游戏瞬移或流媒体频繁缓冲。</p>
+            <span class="tag purple">稳定性第一</span>
+          </div>
+          <div class="card">
+            <div class="icon-tile">%</div>
+            <h3>丢包率 (Packet Loss)</h3>
+            <p>未能成功送达的数据包比例。晚高峰骨干网拥堵时，持续丢包会导致严重卡顿和重传。</p>
+            <span class="tag red">尽量接近 0%</span>
+          </div>
+          <div class="card">
+            <div class="icon-tile">↓</div>
+            <h3>专线吞吐带宽</h3>
+            <p>单位时间内实际传输的最大数据量。全 IPLC/IEPL 专线通常能提供 1Gbps~2.5Gbps 峰值。</p>
+            <span class="tag green">单位：Mbps / Gbps</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 家梯子测速实测数据总表 -->
+    <section class="section" id="benchmark-table">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Real Benchmark Table · 15 Services</div>
+            <h2>15 家主流梯子测速与专线核验汇总</h2>
+            <p>依据官网公开检测接口与登录后台节点状态整理，拒绝虚假刷榜。数据均配有独立深度评测与官网直达链接。</p>
+          </div>
+          <a class="text-link" href="reviews.html">查看 15 家独立评测报告 →</a>
+        </div>
+
+        <div class="notice" style="margin-bottom:24px">
+          <strong>测速口径声明：</strong>入口检测响应时间为客户端到接入调度页的 HTTP 往返耗时，节点在线数据来自登录后台实测，不等同于任意本地宽带的峰值下载速度；建议先月付在本地环境中实测。
+        </div>
+
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>梯子服务</th>
+                <th>入口响应 / 延迟</th>
+                <th>节点在线率</th>
+                <th>专线规格</th>
+                <th>流媒体与原生 IP</th>
+                <th>核验状态</th>
+                <th>快速跳转</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- 01 速界机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo violet">速</span>速界机场</div></td>
+                <td><strong>8 条入口 最快 165ms</strong></td>
+                <td>68/68 全部在线 (100%)</td>
+                <td>全 IPLC (最高 2.5Gbps)</td>
+                <td>原生 IP · 4K/ChatGPT</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=speed">评测报告</a>
+                    <a class="btn-affiliate" href="https://lqy001.speedworldaff.com/#/register?code=p3EKNmlp" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 02 可信云机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo blue">信</span>可信云机场</div></td>
+                <td><strong>3 条线路 最快约 600ms</strong></td>
+                <td>60/60 全部在线 (100%)</td>
+                <td>全 IEPL · 原生线路</td>
+                <td>常用流媒体/AI 解锁</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=kexin">评测报告</a>
+                    <a class="btn-affiliate" href="https://ermaozi01.kosingaff.com/#/register?code=FA6DjjDi" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 03 极连云机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo coral">极</span>极连云机场</div></td>
+                <td><strong>13/13 可用 推荐约 1090ms</strong></td>
+                <td>66 节点 / 61 在线 (92%)</td>
+                <td>全 IPLC (最高 2.5Gbps)</td>
+                <td>原生 IP · 多地区出口</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=jilian">评测报告</a>
+                    <a class="btn-affiliate" href="https://liujie2002.jlyvipaff.com/#/?code=0MxRdXiu" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 04 边缘节点 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo green">边</span>边缘节点</div></td>
+                <td><strong>4/4 可用 最快 1034ms</strong></td>
+                <td>公开线路全部可用</td>
+                <td>全 IPLC (最高 2.5Gbps)</td>
+                <td>原生 IP · 亚太/欧美</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=edge">评测报告</a>
+                    <a class="btn-affiliate" href="https://zoio.edgenovaaff.cc/#/register?code=ti8OUEN2" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 05 快狸机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo coral">狸</span>快狸机场</div></td>
+                <td><strong>入口最快约 1051ms</strong></td>
+                <td>67/67 全部在线 (100%)</td>
+                <td>全 IEPL (最高 2.5Gbps)</td>
+                <td>覆盖港/台/日/新/美/欧</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=kuaili">评测报告</a>
+                    <a class="btn-affiliate" href="https://yyo649929.kuailiaff.com/#/register?code=JVuUcHke" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 06 云图机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo violet">图</span>云图机场</div></td>
+                <td><strong>38 节点 三网优化</strong></td>
+                <td>38 个境外接入点在线</td>
+                <td>移动/电信/三网专线</td>
+                <td>按具体节点实测</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=yuntu">评测报告</a>
+                    <a class="btn-affiliate" href="https://super.ytjcok.org/#/register?code=iKpNlXer" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 07 光年梯机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo blue">光</span>光年梯机场</div></td>
+                <td><strong>4/4 可用 推荐约 1058ms</strong></td>
+                <td>68 节点 / 64 在线 (94%)</td>
+                <td>全 IPLC + 独享 IEPL</td>
+                <td>IPLC 常规 / 独享专线</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=guangnian">评测报告</a>
+                    <a class="btn-affiliate" href="http://liujie2002.gntaff.com/#/?code=NoPkovej" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 08 鲲鹏加速 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo green">鲲</span>鲲鹏加速</div></td>
+                <td><strong>公开注册页正常响应</strong></td>
+                <td>注册页未披露在线率</td>
+                <td>以注册后后台为准</td>
+                <td>待登录后台核验</td>
+                <td><span class="tag orange">公开页核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=kunpeng">评测报告</a>
+                    <a class="btn-affiliate" href="https://kunpengjiasu.com/#/register?code=99UgsawR" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 09 瞬云机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo violet">瞬</span>瞬云机场</div></td>
+                <td><strong>多域名检测动态调度</strong></td>
+                <td>需实时检测节点</td>
+                <td>动态入口调度</td>
+                <td>以最终跳转域名为准</td>
+                <td><span class="tag orange">动态调度</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=shunyun">评测报告</a>
+                    <a class="btn-affiliate" href="https://ddd.jichang.best/#/register?code=7idBwf3R" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 10 云界线机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo blue">界</span>云界线机场</div></td>
+                <td><strong>2/2 可用 最快 1185ms</strong></td>
+                <td>50/50 全部在线 (100%)</td>
+                <td>全 IPLC (最高 2.5Gbps)</td>
+                <td>全 IPLC 专线网络</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=yunjiexian">评测报告</a>
+                    <a class="btn-affiliate" href="https://youxia01.yunjiexianaff.com/#/?code=8ImGvubv" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 11 大佬云机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo coral">佬</span>大佬云机场</div></td>
+                <td><strong>2/2 可用 最快约 952ms</strong></td>
+                <td>公开线路全部在线</td>
+                <td>全 IPLC/IEPL 专线</td>
+                <td>原生 IP · 流媒体/AI</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=dalao">评测报告</a>
+                    <a class="btn-affiliate" href="https://liu01.dalaoyunaff.com/#/?code=9A9fbKzz" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 12 环球梯机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo green">环</span>环球梯机场</div></td>
+                <td><strong>概览延迟 23ms / 入口2023ms</strong></td>
+                <td>12/12 概览节点可用</td>
+                <td>BGP 多运营商融合</td>
+                <td>全球节点融合接入</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=huanqiu">评测报告</a>
+                    <a class="btn-affiliate" href="https://123pps01.huanqiutiaff.com/#/?code=iJzShI5m" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 13 闪电鼠机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo coral">闪</span>闪电鼠机场</div></td>
+                <td><strong>6 条入口 最快 863ms</strong></td>
+                <td>6 条入口线路恢复</td>
+                <td>线路检测已恢复</td>
+                <td>以恢复后后台为准</td>
+                <td><span class="tag orange">入口已恢复</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=shandian">评测报告</a>
+                    <a class="btn-affiliate" href="https://eothvip01.shandianshuaff.com/#/?code=qNodU3f6" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 14 榴莲云机场 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo violet">榴</span>榴莲云机场</div></td>
+                <td><strong>3/3 可用 最快 1365ms</strong></td>
+                <td>入口正常 · 订阅后加载</td>
+                <td>全 IPLC (最高 2.5Gbps)</td>
+                <td>原生 IP · 原生线路</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=liulian">评测报告</a>
+                    <a class="btn-affiliate" href="http://853vip01.liulianyunaff.com/#/?code=O6mS8K5N" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+              <!-- 15 神行加速 -->
+              <tr>
+                <td><div class="brand-cell"><span class="mini-logo blue">神</span>神行加速</div></td>
+                <td><strong>后台延迟 23ms / 入口1612ms</strong></td>
+                <td>50/50 全部在线 (100%)</td>
+                <td>全 IPLC (最高 2.5Gbps)</td>
+                <td>原生 IP · 流媒体/AI</td>
+                <td><span class="tag green">后台已核验</span></td>
+                <td>
+                  <div class="table-actions">
+                    <a class="btn-affiliate-ghost" href="airport.html?id=shenxing">评测报告</a>
+                    <a class="btn-affiliate" href="https://fugui0077.shenxingaff.com/#/?code=z3ybkLVj" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+                  </div>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- 15 家测速分析卡片专区 -->
+    <section class="section tint" id="speed-cards">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Benchmark Analysis · 15 Services</div>
+            <h2>15 家梯子测速实录与分析卡片</h2>
+            <p>点击筛选不同测速特征，详细核对各家机场的线路调度机制、延迟实录与选购建议。</p>
+          </div>
+          <a class="text-link" href="ladder.html">前往 15 家梯子推荐榜 →</a>
+        </div>
+
+        <div class="filters" data-filter-group>
+          <button class="filter-button active" data-filter="all">全部测速 (15)</button>
+          <button class="filter-button" data-filter="fast">极速低延迟</button>
+          <button class="filter-button" data-filter="full">100%全在线</button>
+          <button class="filter-button" data-filter="iplc">全 IPLC 专线</button>
+        </div>
+
+        <div class="grid grid-3">
+          <!-- 01 速界 -->
+          <article class="card ranking-card" data-category="fast iplc full">
+            <div class="rank-head">
+              <div class="mini-logo violet">速</div>
+              <span class="tag purple">最快 165ms · 68 满在线</span>
+            </div>
+            <h3>速界机场测速核验</h3>
+            <p>2026年10月14日官网公开线路检测显示 8 条入口，前三条响应约 165ms、179ms、210ms；后台 68/68 节点全部在线，全 IPLC 专线 2.5Gbps 原生 IP。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>最快约 165ms · 8 条线路</strong></li>
+              <li><span>节点状态</span><strong>68/68 在线 · 0 离线</strong></li>
+              <li><span>专线带宽</span><strong>全 IPLC 专线 · 2.5Gbps 原生</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=speed">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://lqy001.speedworldaff.com/#/register?code=p3EKNmlp" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 02 可信云 -->
+          <article class="card ranking-card" data-category="full">
+            <div class="rank-head">
+              <div class="mini-logo blue">信</div>
+              <span class="tag green">最快 600ms · 60 节点在线</span>
+            </div>
+            <h3>可信云机场测速核验</h3>
+            <p>公开入口约 3 条线路，最近一次检测最快约 600ms；后台节点页显示 60 个节点全部在线、0 个离线。全 IEPL 原生专线，支持常用流媒体与 AI。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>约 3 条线路 · 最快约 600ms</strong></li>
+              <li><span>节点状态</span><strong>60/60 在线 · 顶级专线</strong></li>
+              <li><span>专线带宽</span><strong>全 IEPL 专线 · 不限客户端</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=kexin">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://ermaozi01.kosingaff.com/#/register?code=FA6DjjDi" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 03 极连云 -->
+          <article class="card ranking-card" data-category="iplc">
+            <div class="rank-head">
+              <div class="mini-logo coral">极</div>
+              <span class="tag purple">13 目标调度 · 全 IPLC</span>
+            </div>
+            <h3>极连云机场测速核验</h3>
+            <p>入口多达 13/13 目标可用，推荐入口约 1090ms；后台 66 个节点中 61 个在线。全 IPLC 专线最高 2.5Gbps，流媒体高吞吐稳定不卡顿。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>13/13 目标可用 · 约 1090ms</strong></li>
+              <li><span>节点状态</span><strong>66 节点 · 61 在线</strong></li>
+              <li><span>专线带宽</span><strong>全 IPLC 专线 · 2.5Gbps 峰值</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=jilian">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://liujie2002.jlyvipaff.com/#/?code=0MxRdXiu" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 04 边缘节点 -->
+          <article class="card ranking-card" data-category="fast iplc">
+            <div class="rank-head">
+              <div class="mini-logo green">边</div>
+              <span class="tag green">4/4 全部可用 · 最快 1034ms</span>
+            </div>
+            <h3>边缘节点测速核验</h3>
+            <p>公开检测 4/4 线路全部可用，最快约 1034ms、平均约 1092ms。套餐页标注全 IPLC 专线最高 2.5Gbps 与原生 IP，适合小额体验验证。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>4 条全部可用 · 最快 1034ms</strong></li>
+              <li><span>节点状态</span><strong>状态透明 · 亚太欧美全覆盖</strong></li>
+              <li><span>专线带宽</span><strong>全 IPLC 专线 · 原生 IP 节点</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=edge">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://zoio.edgenovaaff.cc/#/register?code=ti8OUEN2" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 05 快狸 -->
+          <article class="card ranking-card" data-category="full">
+            <div class="rank-head">
+              <div class="mini-logo coral">狸</div>
+              <span class="tag orange">67/67 满在线 · 最快 1051ms</span>
+            </div>
+            <h3>快狸机场测速核验</h3>
+            <p>后台节点页显示 67/67 节点全部在线，覆盖港台日新美及英法德等；官网入口最快约 1051ms。全 IEPL 专线单节点峰值最高 2.5Gbps。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>最快约 1051ms · 多入口选优</strong></li>
+              <li><span>节点状态</span><strong>67/67 全部在线 (100%)</strong></li>
+              <li><span>专线带宽</span><strong>全 IEPL 专线 · 最高 2.5Gbps</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=kuaili">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://yyo649929.kuailiaff.com/#/register?code=JVuUcHke" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 06 云图 -->
+          <article class="card ranking-card" data-category="fast">
+            <div class="rank-head">
+              <div class="mini-logo violet">图</div>
+              <span class="tag purple">38 节点 · 三网优化接入</span>
+            </div>
+            <h3>云图机场测速核验</h3>
+            <p>后台接入点页显示 38 个境外节点，每个节点可选移动、电信或三网优化专线。多语言后台支持，按不同网络环境动态匹配最佳路由。</p>
+            <ul class="metric-list">
+              <li><span>节点分布</span><strong>38 个境外接入点全部可用</strong></li>
+              <li><span>线路优化</span><strong>移动 / 电信 / 三网独立优化</strong></li>
+              <li><span>测速特征</span><strong>分运营商匹配 · 适合复杂宽带</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=yuntu">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://super.ytjcok.org/#/register?code=iKpNlXer" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 07 光年梯 -->
+          <article class="card ranking-card" data-category="iplc">
+            <div class="rank-head">
+              <div class="mini-logo blue">光</div>
+              <span class="tag purple">全 IPLC / 独享私人 IEPL</span>
+            </div>
+            <h3>光年梯机场测速核验</h3>
+            <p>公开入口 4/4 可用，推荐入口约 1058ms；后台 68 个节点中 64 个在线。常规套餐全 IPLC (最高 2.5Gbps)，更有高保障独享 IEPL 私人专线。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>4/4 可用 · 推荐约 1058ms</strong></li>
+              <li><span>节点状态</span><strong>68 节点 · 64 在线 (94%)</strong></li>
+              <li><span>专线带宽</span><strong>常规 IPLC 2.5G + 独享 IEPL</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=guangnian">测速评测详情 →</a>
+              <a class="btn-affiliate" href="http://liujie2002.gntaff.com/#/?code=NoPkovej" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 08 鲲鹏加速 -->
+          <article class="card ranking-card" data-category="fast">
+            <div class="rank-head">
+              <div class="mini-logo green">鲲</div>
+              <span class="tag orange">多语言注册 · 快速直达</span>
+            </div>
+            <h3>鲲鹏加速测速核验</h3>
+            <p>公开注册页支持多语言并自动填入邀请码，注册通道响应迅速。套餐价格、专线规格与具体测速数据需以注册后后台面板为准。</p>
+            <ul class="metric-list">
+              <li><span>注册响应</span><strong>多语言公开注册页正常访问</strong></li>
+              <li><span>版本状态</span><strong>页面标注版本 v0.4.0</strong></li>
+              <li><span>核验提示</span><strong>建议月付体验后台真实节点</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=kunpeng">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://kunpengjiasu.com/#/register?code=99UgsawR" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 09 瞬云 -->
+          <article class="card ranking-card" data-category="fast">
+            <div class="rank-head">
+              <div class="mini-logo violet">瞬</div>
+              <span class="tag orange">动态检测 · 建议短周期验证</span>
+            </div>
+            <h3>瞬云机场测速核验</h3>
+            <p>入口采用多域名检测自动跳转机制，网络环境可能产生波动。对动态调度类梯子，建议先以小额月付验证本地延迟和晚高峰表现。</p>
+            <ul class="metric-list">
+              <li><span>入口调度</span><strong>多域名线路检测跳转</strong></li>
+              <li><span>测速特征</span><strong>随时间与网络环境动态变动</strong></li>
+              <li><span>选购建议</span><strong>建议先短周期月付验证</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=shunyun">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://ddd.jichang.best/#/register?code=7idBwf3R" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 10 云界线 -->
+          <article class="card ranking-card" data-category="iplc full">
+            <div class="rank-head">
+              <div class="mini-logo blue">界</div>
+              <span class="tag purple">50/50 满在线 · 全 IPLC</span>
+            </div>
+            <h3>云界线机场测速核验</h3>
+            <p>公开入口 2/2 可用，最快约 1185ms；后台 50/50 节点全部在线。套餐标注全 IPLC 专线最高 2.5Gbps，自动选优入口上手非常省心。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>2/2 可用 · 最快约 1185ms</strong></li>
+              <li><span>节点状态</span><strong>50/50 全部在线 (100%)</strong></li>
+              <li><span>专线带宽</span><strong>全 IPLC 专线 · 最高 2.5Gbps</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=yunjiexian">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://youxia01.yunjiexianaff.com/#/?code=8ImGvubv" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 11 大佬云 -->
+          <article class="card ranking-card" data-category="fast">
+            <div class="rank-head">
+              <div class="mini-logo coral">佬</div>
+              <span class="tag green">最快 952ms · 原生 IP 专线</span>
+            </div>
+            <h3>大佬云机场测速核验</h3>
+            <p>官网公开检测 2/2 线路全部可用，最快约 952ms、平均约 1126ms。小而精路线，套餐标注全 IPLC/IEPL 原生 IP，流媒体与 AI 解锁适配良好。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>2 条线路全部可用 · 最快 952ms</strong></li>
+              <li><span>平均响应</span><strong>约 1126ms · 状态透明</strong></li>
+              <li><span>专线网络</span><strong>全 IPLC/IEPL · 原生 IP 解锁</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=dalao">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://liu01.dalaoyunaff.com/#/?code=9A9fbKzz" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 12 环球梯 -->
+          <article class="card ranking-card" data-category="fast">
+            <div class="rank-head">
+              <div class="mini-logo green">环</div>
+              <span class="tag green">后台延迟 23ms · BGP 多线</span>
+            </div>
+            <h3>环球梯机场测速核验</h3>
+            <p>后台概览显示 12/12 节点可用、延迟仅 23ms；公开入口约 2023ms。强调全球节点覆盖与 BGP 多运营商融合线路，99.99% SLA 保障。</p>
+            <ul class="metric-list">
+              <li><span>后台延迟</span><strong>概览显示 23ms · 12/12 可用</strong></li>
+              <li><span>网络架构</span><strong>BGP 多运营商多线融合</strong></li>
+              <li><span>并发支持</span><strong>按设备数阶梯分档（3~10台）</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=huanqiu">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://123pps01.huanqiutiaff.com/#/?code=iJzShI5m" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 13 闪电鼠 -->
+          <article class="card ranking-card" data-category="fast">
+            <div class="rank-head">
+              <div class="mini-logo coral">闪</div>
+              <span class="tag orange">6 条入口恢复 · 最快 863ms</span>
+            </div>
+            <h3>闪电鼠机场测速核验</h3>
+            <p>2026年10月14日线路检测入口已恢复，共 6 条入口，当前前三条响应约 863ms、899ms、921ms。建议先以短周期月付测试实际下载带宽。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>共 6 条入口 · 最快约 863ms</strong></li>
+              <li><span>均值表现</span><strong>前三条均值约 894ms</strong></li>
+              <li><span>核验状态</span><strong>公开入口恢复 · 建议短周期</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=shandian">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://eothvip01.shandianshuaff.com/#/?code=qNodU3f6" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 14 榴莲云 -->
+          <article class="card ranking-card" data-category="iplc">
+            <div class="rank-head">
+              <div class="mini-logo violet">榴</div>
+              <span class="tag purple">全 IPLC 2.5G · 最快 1365ms</span>
+            </div>
+            <h3>榴莲云机场测速核验</h3>
+            <p>公开入口 3/3 可用，最快约 1365ms。套餐页明确标注全 IPLC 专线、最高 2.5Gbps、原生 IP，适合猫山王/大黑刺等大流量影音场景。</p>
+            <ul class="metric-list">
+              <li><span>入口测速</span><strong>3/3 全部可用 · 最快 1365ms</strong></li>
+              <li><span>专线带宽</span><strong>全 IPLC 专线 · 最高 2.5Gbps</strong></li>
+              <li><span>节点支持</span><strong>原生 IP · 订阅后刷新节点</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=liulian">测速评测详情 →</a>
+              <a class="btn-affiliate" href="http://853vip01.liulianyunaff.com/#/?code=O6mS8K5N" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+
+          <!-- 15 神行加速 -->
+          <article class="card ranking-card" data-category="fast iplc full">
+            <div class="rank-head">
+              <div class="mini-logo blue">神</div>
+              <span class="tag purple">后台延迟 23ms · 50 满在线</span>
+            </div>
+            <h3>神行加速测速核验</h3>
+            <p>公开入口 4 条线路可用，后台节点页 50/50 全部在线，仪表盘延迟 23ms。全 IPLC 专线最高 2.5Gbps，支持原生 IP 及流媒体/AI 深度解锁。</p>
+            <ul class="metric-list">
+              <li><span>后台延迟</span><strong>仪表盘 23ms · 节点 50/50 在线</strong></li>
+              <li><span>专线带宽</span><strong>全 IPLC 专线 · 最高 2.5Gbps</strong></li>
+              <li><span>解锁能力</span><strong>原生 IP · 4K 流媒体与 ChatGPT</strong></li>
+            </ul>
+            <div class="card-actions">
+              <a class="text-link" href="airport.html?id=shenxing">测速评测详情 →</a>
+              <a class="btn-affiliate" href="https://fugui0077.shenxingaff.com/#/?code=z3ybkLVj" target="_blank" rel="noopener sponsored">官网直达 ↗</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- 可复查的科学测速流程 -->
+    <section class="section">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">Protocol</div>
+            <h2>可复查的 6 步科学测速流程</h2>
+            <p>固定变量、重复采样、避免单次峰值误导，才能测出真实的网络体感。</p>
+          </div>
+          <a class="text-link" href="tutorials.html">查看客户端配置教程 →</a>
+        </div>
+        <div class="grid grid-2 steps">
+          <div class="card step">
+            <h3>记录本地网络基线</h3>
+            <p>断开梯子工具，先使用 Speedtest 测试本地真实宽带或 5G 延迟与吞吐；如果本地基线本身丢包或拥堵，后续所有测速均无参考意义。</p>
+          </div>
+          <div class="card step">
+            <h3>固定测试设备与测试端</h3>
+            <p>不要在 WiFi、有线网卡或手机 5G 之间来回混杂测试，也不要跨不同测速平台直接比较数字。测试时应尽量固定同一目标测速节点。</p>
+          </div>
+          <div class="card step">
+            <h3>覆盖多个关键时段</h3>
+            <p>重点测试晚间 20:00–23:00 晚高峰、工作日白天与周末三个时段。单次深夜极速不代表可用，高峰抗拥堵才是好梯子的核心能力。</p>
+          </div>
+          <div class="card step">
+            <h3>每组测试重复取中位数</h3>
+            <p>同一节点连续测 3 次，剔除明显由于握手抖动产生的极大或极小异常值，保留稳态中位数，并记录丢包率是否大于 0%。</p>
+          </div>
+          <div class="card step">
+            <h3>补充真实业务负载体验</h3>
+            <p>测速跑分快不代表实际好用。应同时打开 YouTube 4K 播放观察缓冲时间，或通过 ChatGPT / Claude 发起长文本对话，验证交互响应延迟。</p>
+          </div>
+          <div class="card step">
+            <h3>记录测试环境上下文</h3>
+            <p>保留测试日期、运营商（电信/联通/移动）、省份、设备、客户端（Clash/Sing-box/Shadowrocket）与协议，方便日后比对排查。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 底部保障与导航 -->
+    <section class="section tint">
+      <div class="container">
+        <div class="cta">
+          <div>
+            <h2>想进一步了解各家机场的套餐与专线？</h2>
+            <p>进入 15 家深度评测库，查看详细价格档位、退款规则与常见问题答疑。</p>
+          </div>
+          <a class="button" href="reviews.html">进入 15 家梯子评测全库 →</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div data-site-footer></div>
+  <script src="assets/site.js"></script>
+</body>
+</html>
